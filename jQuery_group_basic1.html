@@ -1,0 +1,131 @@
+<html>
+<head>
+    <title>jQuery Demo!</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+    .intro {
+        color:red;
+    }
+    #yospan {
+    display:none;
+}
+#seal {
+    display:none;
+}
+
+
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#button1").click(function(){
+            $("p").addClass("intro");
+        });
+        $("#button2").click(function(){
+            $("h4").after("This is the after text");
+
+        });
+        $("#button3").click(function(){
+            $("h2").append(" sandwiches!");
+            $("h2").before("We're best friends!")
+        });
+        $("#button4").click(function(){
+            $( ".hello" ).html( "<span class='intro'>Hello <b>Again</b></span>" );
+            $("h3").text("Now to say something else! Muahahahaha!")
+        });
+        $("#button5").click(function(){
+            $("#button5").text("NOW IT SAYS ZOIDBERG AND IS DOWN HERE!")
+            $("img").attr("width", "500");
+            $("img").attr("height", "500");
+        });
+        $("#button6").click(function(){
+            $('#img-hide').toggle('');
+        });
+        $("#button7").click(function(){
+            $("#img-hide").hide('');
+        });
+        $("#button8").click(function(){
+            $("#img-hide").show('');
+        });
+        $("#button9").click(function(){
+            $("#slide").slideDown();
+        });
+        $("#button10").click(function(){
+            $("#slide").slideToggle();
+        });
+        $("#button11").click(function(){
+            $("#slide").slideUp();
+        });
+                $( "#clickme" ).click(function() {
+          $( "#seal" ).fadeIn( 8000, function() {
+    // Animation complete
+  });
+});
+        $("#yo").focus(function() {
+            $("span").css("display", "inline").fadeOut(3000);
+        });
+
+    
+});
+    </script>
+</head>
+<body>
+
+
+    <button id="button1">Add Class</button>
+    <H1>Add class.</h1>
+        <br>
+        <p>Click the button to add class 'red' to this paragraph.</p>
+        <hr>
+    <button id="button2">Add an .after text</button>
+    <h4>This is the text</h4>
+    <hr>
+    <button id="button3">This does the .append and .before!</button>
+    <br>
+    <h2>We finish each other's</h2>
+    <hr>
+    <button id="button4">This does HTML and changes that header!</button>
+    <br>
+        <span>Hello!</span>
+        <div class="hello"></div>
+        <div class="hello"></div>
+        <div class="hello"></div>
+
+<h3>This is the new text!</h3>
+
+<br>
+<hr>
+<br>
+
+    <button id="button5">What is that tiny picture???</button>
+
+<img src="http://tympanogram.com/files/zoidberg_hooray.jpg" width="10" height="10"><br><br>
+    <hr>
+     <button id="button6">.toggle button hides or shows images or texts</button>
+     <button id="button7">.hide will hide pics or text FOREVER...unless you have a .show button</button>
+     <button id="button8">.show will show your pics or text that has been hidden FOREVER</button><br><br>
+        <img id="img-hide" src="http://www.dumpaday.com/wp-content/uploads/2011/12/funny-meme-pictures.jpg"></img>
+     <hr>
+     <button id="button9">This .slideDown button will slide down the text to reappear</button>
+     <button id="button10">This .slideToggle button will toggle both</button>
+     <button id="button11">This .slideUp button will slide up the text to disappear</button>
+     <br>
+     <br>
+     <p id="slide">This is the text that you slide up and down with</p>
+<br>
+<hr>
+
+<div id="clickme">
+  CLICK HERE TO SEE A SAD SEAL
+</div>
+<img id="seal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTXFXvQfXMReaYbJCtiifjJo1h4DLfvo5nIdb3pz9au39KvDnWIg" alt="" width="200" height="150">
+
+<br>
+<hr>
+<br>
+<input id="yo" type="text"> <span id="yospan">You totally want to buy me lunch</span></input>
+<br>
+I suppose that's the end...
+
+
+</body>
+</html>
